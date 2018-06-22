@@ -14,4 +14,22 @@ class TableController extends Controller
             'data' => $data
         ], 200);
     }
+
+    public function visit()
+    {
+        $data = \DB::select("SELECT * FROM 	BR_DADOS_DTVISITA_OBRA");
+        return response()->json([
+            'total' => count($data),
+            'data' => $data
+        ], 200);
+    }
+
+    public function shutdown_by_date()
+    {
+        $data = \DB::select("SELECT * FROM 	BR_OPINIAO_DTDESLIGTO");
+        return response()->json([
+            'total' => count($data),
+            'data' => $data
+        ], 200);
+    }
 }
