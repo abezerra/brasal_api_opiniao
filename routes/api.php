@@ -22,5 +22,6 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('opiniao', 'TableController@index');
     Route::get('dtvisitaobra', 'TableController@visit');
     Route::get('dtdesligamento', 'TableController@shutdown_by_date');
+    Route::get('dtentrega', 'TableController@delivery_date');
 });
 

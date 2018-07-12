@@ -32,4 +32,14 @@ class TableController extends Controller
             'data' => $data
         ], 200);
     }
+
+
+    public function delivery_date()
+    {
+        $data = \DB::select("SELECT * FROM  BR_DADOS_DT_ENTREGA");
+        return response()->json([
+            'total' => count($data),
+            'data' => $data
+        ], 200);
+    }
 }
